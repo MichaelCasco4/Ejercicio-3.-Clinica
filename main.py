@@ -1,7 +1,8 @@
 from modulos import Clinica,Paciente
 
 # Función principal que maneja el menú interactivo de la clínica
-def menu():
+
+def menu(clinica):
     clinica = Clinica()
     while True:
         print("\n--- Menú Clínica ---")
@@ -50,4 +51,5 @@ def menu():
 
 # Punto de entrada del programa
 if __name__ == "__main__":
-    menu()
+    clinica = Clinica()   #Se inicializa la instancia donde se guardan los pacientes
+    menu(clinica)         

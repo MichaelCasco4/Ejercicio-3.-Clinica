@@ -21,7 +21,7 @@ class Clinica:
         nuevo_paciente = Paciente(nombre, edad, sintoma, prioridad)
          # Si la lista está vacía o el nuevo paciente tiene más prioridad que el frente
         if self.frente is None or nuevo_paciente.prioridad < self.frente.prioridad:
-            nuevo_paciente.siguinte = self.frente
+            nuevo_paciente.siguiente = self.frente
             self.frente = nuevo_paciente
         else:
              # Busca la posición correcta donde insertar el nuevo paciente
