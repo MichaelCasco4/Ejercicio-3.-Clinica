@@ -5,14 +5,13 @@ def separarParImpar(pila_original):
     pila_impar = Pila()
 
     while pila_original.cabeza is not None:
-        nodo_extraido = pila_original.pop()
-        if nodo_extraido.dato % 2 == 0:
+        nodo_extraido = pila_original.pop() #Extrae cada nodo de la lista
+        if nodo_extraido.dato % 2 == 0: #Si el numero es para lo añade a la lista de los pares
             pila_par.push(nodo_extraido.dato)
         else:
-            pila_impar.push(nodo_extraido.dato)
-    print("Lista par:")
+            pila_impar.push(nodo_extraido.dato) #De otro modo la agrega a la lista de los impares
+    print("Lista ordenada:")
     pila_par.imprimir()
-    print("Lista impar:")
     pila_impar.imprimir()
         
 
